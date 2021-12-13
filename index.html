@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Talus</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="fav.svg">
+<style>
+
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.img1 {
+  background-image: url("logo.svg");
+  min-height: 90%;
+}
+.img1m {
+  background-image: url("logom.svg");
+  min-height: 90%;
+}
+
+.img2 {
+  background-image: url("travel.svg");
+  min-height: 100%;
+}
+.img2m {
+  background-image: url("travelm.svg");
+  min-height: 100%;
+}
+
+.img3 {
+  background-image: url("chatbot.svg");
+  min-height: 100%;
+}
+.img3m {
+  background-image: url("chatbotm.svg");
+  min-height: 100%;
+}
+.img4 {
+  background-image: url("book.svg");
+  min-height: 100%;
+}
+.img4m {
+  background-image: url("bookm.svg");
+  min-height: 100%;
+}
+.img5 {
+  background-image: url("ai.svg");
+  min-height: 100%;
+}
+.img5m {
+  background-image: url("aim.svg");
+  min-height: 100%;
+}
+.img6 {
+  background-image: url("anestis.jpg");
+  min-height: 100%;
+}
+
+a { color: black; text-decoration: none; }
+
+.arrow {
+  text-align: center;
+  margin: 0% 0;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+.socmed {
+opacity: 1;
+}
+.socmed:hover{
+opacity:0.3;
+}
+
+.mobile {
+  display: none;
+  visibility: hidden;
+}
+@media screen and (max-width:900px), screen and (max-height:500px) {
+    .desk { display: none !important; }
+    .mobile  { display: block; visibility: visible; }
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="img1  desk" style="background-image: height:2000px;background-attachment: fixed;background-position: center; background-repeat: no-repeat; background-size: cover;">
+<img id="eng" src="flag_br.svg"  onclick="choose_eng()" align="right" style="cursor: pointer; vertical-align:middle;margin:20px 20px;border-radius: 40px 40px 40px 40px" width="80" height="80">
+<img id="gre" src="flag_gr.svg"  onclick="choose_gre()" align="right" style="cursor: pointer; vertical-align:middle;margin:20px 20px;border-radius: 40px 40px 40px 40px; opacity: 0.3" width="80" height="80">
+</div>
+
+<div class="img1m  mobile" style="background-image: height:2000px;background-position: center; background-repeat: no-repeat; background-size: cover;">
+</div>
+  
+ <div lang="en" class="arrow bounce  desk">
+  scroll down <br>
+ <a class="fa fa-arrow-down fa-2x"></a>
+ </div>
+ 
+  <div lang="el" class="arrow bounce  desk">
+  πήγαινε κάτω <br>
+ <a class="fa fa-arrow-down fa-2x"></a>
+ </div>
+ 
+ 
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+
+window.onload = function() { $('[lang="el"]').toggle(); };
+/*
+  if(getCookie("language")){
+  if(getCookie("language")=="english"){
+	document.cookie = "language=english; path=/";
+    document.getElementById("eng").style.opacity = 1;
+    document.getElementById("gre").style.opacity = 0.3;
+	$('[lang="el"]').toggle();
+  }
+  else{
+	document.cookie = "language=greek; path=/";
+    document.getElementById("gre").style.opacity = 1;
+    document.getElementById("eng").style.opacity = 0.3;
+	$('[lang="en"]').toggle();
+	}
+  }
+  else{
+  document.getElementById("eng").style.opacity = 1;
+  document.getElementById("gre").style.opacity = 0.3;
+  $('[lang="el"]').toggle();}
+};
+*/
+function choose_eng() {
+  if(document.getElementById("eng").style.opacity==0.3){
+  document.getElementById("eng").style.opacity = 1;
+  document.getElementById("gre").style.opacity = 0.3;
+  $('[lang="el"]').hide();
+  $('[lang="en"]').toggle();
+  //document.cookie = "language=english; path=/";
+  }
+}
+function choose_gre() {
+  if(document.getElementById("gre").style.opacity==0.3){
+  document.getElementById("gre").style.opacity = 1;
+  document.getElementById("eng").style.opacity = 0.3;
+  $('[lang="en"]').hide();
+  $('[lang="el"]').toggle();
+  //document.cookie = "language=greek; path=/";
+  }
+}
+/*
+function setCookie(name, value, daysToLive) {
+    var cookie = name + "=" + encodeURIComponent(value);
+    if(typeof daysToLive === "number") {
+        cookie += "; max-age=" + (daysToLive*24*60*60);
+        document.cookie = cookie;
+    }
+}
+
+function getCookie(name) {
+    var cookieArr = document.cookie.split(";");
+    for(var i = 0; i < cookieArr.length; i++) {
+        var cookiePair = cookieArr[i].split("=");
+        if(name == cookiePair[0].trim()) {
+            return decodeURIComponent(cookiePair[1]);
+        }
+    }
+    return null;
+}
+*/
+</script>
+
+
+
+<div lang="en" style="color: #2f2e41;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h1 style="text-align:center;">Talus, Customer Service</h2>
+  <p style="text-align:left;"> <font size="+2">We are a technology startup based on Patras, Greece. We are focused on customer service using Artificial Intelligence and web applications. At the moment we are developing a chatbot for tourist agencies which they can use in order to promote packages or answer FAQ. At the same time agencies can have access to statistics which can help them expand their bussiness. </font></p>
+</div>
+<div lang="el" style="color: #2f2e41;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h1 style="text-align:center;">Talus, Customer Service</h2>
+  <p style="text-align:left;"> <font size="+2">Είμαστε μια τεχνολογική startup, στην Πάτρα, Ελλάδα. Εστιάζουμε στην εξυπηρέτηση πελατών κάνοντας χρήση τεχνητής νουμοσύνης και διαδυκτιακών εφαρμογών. Αυτή την στιγμή αναπτύζουμε ένα chatbot για τουριστικά γραφεία το οποίο μπορούν να χρησιμοπποιήσουν ώστε να προωθούν πακέτα ή να απαντούν σε συχνές ερωτήσεις. Ταυτόχρονα, τα γραφεία μπορούν να έχουν πρόσβαση στα στατιστικά, βοηθώντας την επιχείρηση τους. </font></p>
+</div>
+
+
+<div lang="en">
+  <div style="color:#fff; background-color:#2f2e41; text-align:center;padding:30px 60px;">
+  <h2><font size="+2">We are designing a chatbot for travel agencies, for promoting travel packages.</font></h2>
+  </div>
+</div>
+<div lang="el">
+  <div style="color:#fff; background-color:#2f2e41; text-align:center;padding:30px 60px;">
+  <h2><font size="+2">Σχεδιάζουμε ένα chatbot για τουριστικά γραφεία, ώστε να προωθούν πακέτα διακοπών.</font></h2>
+  </div>
+</div>
+
+
+
+<div class="img2  desk" style="background-image: height:2000px;background-attachment: fixed;background-position: center; background-repeat: no-repeat; background-size: cover;"></div>
+<div class="img2m  mobile" style="background-image: height:2000px;background-position: center; background-repeat: no-repeat; background-size: cover;"></div>
+
+
+<div lang="en">
+  <div style="color:#fff; background-color:#2f2e41; text-align:center;padding:30px 60px;">
+  <h2><font size="+2">The chatbot can be used on a website, facebook page, instagram page, or any other social media platform!</font></h2>
+  </div>
+</div>
+<div lang="el">
+  <div style="color:#fff; background-color:#2f2e41; text-align:center;padding:30px 60px;">
+  <h2><font size="+2">Το chatbot μπορεί να χρησιμοποιηθεί σε ιστοσελίδα, σε σελίδα στο facebook ή οπουδήποτε αλλού!</font></h2>
+  </div>
+</div>
+
+
+
+<div class="img3  desk" style="background-image: height:2000px;background-attachment: fixed;background-position: center; background-repeat: no-repeat; background-size: cover;"></div>
+<div class="img3m  mobile" style="background-image: height:2000px;background-position: center; background-repeat: no-repeat; background-size: cover;"></div>
+
+<div lang="en">
+  <div style="color:#fff; background-color:#2f2e41; text-align:center;padding:30px 60px;">
+  <h2><font size="+2">By talking to the chatbot the user can book a trip or ask questions</font></h2>
+  </div>
+</div>
+<div lang="el">
+  <div style="color:#fff; background-color:#2f2e41; text-align:center;padding:30px 60px;">
+  <h2><font size="+2">Μιλώντας του ο χρήστης μπορεί να κάνει κράτηση ή κάποια ερώτηση.</font></h2>
+  </div>
+</div>
+
+
+<div class="img4  desk" style="background-image: height:2000px;background-attachment: fixed;background-position: center; background-repeat: no-repeat; background-size: cover;"></div>
+<div class="img4m  mobile" style="background-image: height:2000px;background-position: center; background-repeat: no-repeat; background-size: cover;"></div>
+
+<div lang="en">
+  <div style="color:#fff; background-color:#2f2e41; text-align:center;padding:30px 60px;">
+  <h2><font size="+2">Our AI algorithm will make sure to suggest the right package for each customer!</font></h2>
+  </div>
+</div>
+<div lang="el">
+  <div style="color:#fff; background-color:#2f2e41; text-align:center;padding:30px 60px;">
+  <h2><font size="+2">Ο αλγοριθμός μας τεχνητής νουμοσύνης προτείνει τα κατάλληλα πακέτα για τον κάθε χρήστη!</font></h2>
+  </div>
+</div>
+
+
+
+<div class="img5 desk" style="background-image: height:2000px;background-attachment: fixed;background-position: center; background-repeat: no-repeat; background-size: cover;"></div>
+<div class="img5m mobile" style="background-image: height:2000px;background-position: center; background-repeat: no-repeat; background-size: cover;"></div>
+
+
+<div lang="en">
+  <div style="color:#fff; background-color:#2f2e41; text-align:center;padding:30px 60px;">
+  <h1><font size="+2">We work hard in making your bussiness grow.</font></h1>
+  </div>
+</div>
+<div lang="el">
+  <div style="color:#fff; background-color:#2f2e41; text-align:center;padding:30px 60px;">
+  <h1><font size="+2">Εργαζόμαστε σκληρά για να κάνουμε την επιχείρηση σας να μεγαλώσει.</font></h1>
+  </div>
+</div>
+
+
+<div class="img6  desk" style="background-image: height:2000px;background-attachment: fixed;background-position: center; background-repeat: no-repeat; background-size: cover;"></div>
+<div class="img6  mobile" style="background-image: height:2000px;background-position: center; background-repeat: no-repeat; background-size: cover;"></div>
+
+
+<div lang="en">
+  <div style="color:#fff;background-color:#2f2e41;text-align:center;padding:5px 40px;text-align: left;">
+  <h2>Contact us at:  talus.customer.service@gmail.com<br>or find us at: <a href="https://www.facebook.com/taluscs"> <img src="fb.png"  class="socmed" style="vertical-align:middle;margin:20px 10px;border-radius: 14px 14px 14px 14px" width="53" height="53">  </a>  <a href="https://www.instagram.com/talus_cs"> <img class="socmed" src="insta.png"  style="vertical-align:middle;margin:20px 10px;border-radius: 14px 14px 14px 14px" width="53" height="53" > </a></h2>
+  </div>
+</div>
+<div lang="el">
+  <div style="color:#fff;background-color:#2f2e41;text-align:center;padding:5px 40px;text-align: left;">
+  <h2>Επικοινωνείστε μαζί μας:  talus.customer.service@gmail.com<br>ή βρείτε μας στα κοινωνικά δίκτυα: <a href="https://www.facebook.com/taluscs"> <img src="fb.png"  class="socmed" style="vertical-align:middle;margin:20px 10px;border-radius: 14px 14px 14px 14px" width="53" height="53">  </a>  <a href="https://www.instagram.com/talus_cs"> <img class="socmed" src="insta.png"  style="vertical-align:middle;margin:20px 10px;border-radius: 14px 14px 14px 14px" width="53" height="53" > </a></h2>
+  </div>
+
+
+    <script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+    </script> 
+    <script> 
+         $(document).ready(function(){ 
+            $(window).scroll(function(){ 
+                $('.arrow').css("opacity", 1- $(window).scrollTop() / 400)
+				$('.img1').css("opacity", 1- $(window).scrollTop() / 600)				
+            }) 
+        }) 
+    </script> 
+	
+</body>
+</html>
