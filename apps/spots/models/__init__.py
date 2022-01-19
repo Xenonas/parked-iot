@@ -38,3 +38,7 @@ class Parkingspot(models.Model):
     status = models.CharField(max_length=20)
     categoryspot = models.CharField(db_column='categorySpot', max_length=20)  # Field name made lowercase.
     catid = models.ForeignKey('Catparking', models.DO_NOTHING, db_column='catId')  # Field name made lowercase.
+
+class Getdata(models.Model):
+    dataid = models.AutoField(db_column='dataId', primary_key=True)
+    datatext = models.TextField()

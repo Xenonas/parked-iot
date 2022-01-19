@@ -6,4 +6,5 @@ urlpatterns = [
     path('available/', views.availableseats, name="available"),
     path('save/', views.saveseat, name="save"),
     path('change/', views.saveseat, name="change"),
+    path('getdata/', views.savedata, name="data")
 ]

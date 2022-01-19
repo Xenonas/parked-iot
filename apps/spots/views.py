@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Organization, Parkingspot, Catparking, PublicUser
+from .models import Organization, Parkingspot, Catparking, PublicUser, Getdata
 from django.http import JsonResponse
 
 # Create your views here.
@@ -82,4 +82,14 @@ def change(request):
             }
         
         return JsonResponse(responseData)
+    return render(request,'spots/hi.html')
+
+def savedata(request):
+    if request.method == 'POST':
+        st = ''
+        for key, value in request.POST.items():
+            st += ('Key: %s' % (key) ) 
+            # print(f'Key: {key}') in Python >= 3.7
+            st += ('Value %s' % (value) )
+        sentData = Getdata.objects.create(datatext =st)
     return render(request,'spots/hi.html')
